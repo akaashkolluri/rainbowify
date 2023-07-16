@@ -36,8 +36,7 @@ function Quilt() {
         },
       }
     );
-    setTimeout(() => console.log("Awaiting"), 4000);
-
+    
     console.log(data.items);
     setTopData(data.items);
 
