@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/aileron": "^5.0.5",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -12,12 +13,20 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.7.0",
     "axios": "^1.4.0",
+    "color-supreme": "^0.1.4",
+    "color-thief-react": "^2.1.0",
+    "colorthief": "^2.4.0",
+    "dominant-color": "0.0.1",
+    "get-pixels": "^3.3.3",
+    "pixel-paradise": "0.0.1",
     "react": "^18.2.0",
     "react-animated-components": "^4.0.0",
     "react-dom": "^18.2.0",
+    "react-native-image-colors": "^2.3.0",
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
     "react-wordcloud": "^1.2.7",
+    "sharp": "^0.32.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "browser": {
+    "child_process": false
   }
 }

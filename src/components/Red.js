@@ -4,6 +4,7 @@ import ReactWordcloud from "react-wordcloud";
 import { Image } from "antd";
 import RedLogo from "../red.png";
 // import "./App.css";
+import "@fontsource/aileron";
 
 function Red({ urls }) {
   return (

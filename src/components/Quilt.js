@@ -4,11 +4,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Row, Col, Image } from "antd";
 
-
 function Quilt() {
   const [id, setId] = useState("");
   const [topData, setTopData] = useState("");
   const [url, setUrl] = useState("");
+  const [albumUrl, setAlbumUrl] = useState("");
+  const [red, setRed] = useState("");
+  const [blue, setBlue] = useState("");
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -23,34 +25,81 @@ function Quilt() {
   }, []);
 
   const makeQuilt = async (id) => {
-    console.log("here is the id" + id);
-    const { data } = await axios.get(
-      "https://api.spotify.com/v1/me/top/artists",
-      {
-        headers: {
-          Authorization: `Bearer ${id}`,
-        },
-        params: {
-          time_range: "long_term",
-          limit: 16,
-        },
-      }
-    );
-    
-    console.log(data.items);
-    setTopData(data.items);
+    let topTracks = [];
+    let artWork = [];
 
-    let urls = [];
-    for (let i = 0; i < data.items.length; i++) {
-      urls.push(data.items[i].images[0].url);
-    }
-    for (let i = data.items.length; i < 16; i++) {
-      urls.push(
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ80b5XJ32XRL1rsnmZl1Ojoorn_EFpEqOEzFZmz99f9w&s"
+    for (let i = 0; i < 10; i++) {
+      const { data } = await axios.get(
+        "https://api.spotify.com/v1/me/top/tracks",
+        {
+          headers: {
+            Authorization: `Bearer ${id}`,
+          },
+          params: {
+            time_range: "long_term",
+            limit: 50,
+            offset: i * 50,
+          },
+        }
       );
+
+      if (data.items.length == 0) break;
+
+      for (let j = 0; j < data.items.length; j++) {
+        let albumUrl = data.items[j].album.images[0].url;
+
+        if (!artWork.includes(albumUrl)) {
+          artWork.push(albumUrl);
+        }
+      }
+      topTracks = [...topTracks, ...data.items];
     }
-    setUrl(urls);
-    console.log(urls);
+
+    // console.log(topTracks);
+    // console.log(artWork);
+    setTopData(topTracks);
+    setAlbumUrl(artWork);
+
+    makeAlbums(artWork);
+
+    // let urls = [];
+    // for (let i = 0; i < data.items.length; i++) {
+    //   urls.push(data.items[i].images[0].url);
+    // }
+    // for (let i = data.items.length; i < 16; i++) {
+    //   urls.push(
+    //     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ80b5XJ32XRL1rsnmZl1Ojoorn_EFpEqOEzFZmz99f9w&s"
+    //   );
+    // }
+    // setUrl(urls);
+    // console.log(urls);
+  };
+
+  const makeAlbums = async (artWork) => {
+    console.log(artWork[0]);
+    let urlEnd = artWork.toString();
+    const { data } = await axios.get(
+      "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?" +
+        urlEnd
+    );
+
+    console.log(
+      "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?" +
+        urlEnd
+    );
+
+    console.log(data);
+
+    // console.log("making albums" + artWork);
+
+    // const img = url(artWork[0]);
+    // getColors(artWork[0], {
+    //   fallback: "#228B22",
+    //   cache: true,
+    //   key: url,
+    // }).then((x) => console.log("colors", x));
+
+    // console.log(data);
   };
 
   return (
