@@ -79,12 +79,12 @@ function Quilt() {
     console.log(artWork[0]);
     let urlEnd = artWork.toString();
     const { data } = await axios.get(
-      "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?" +
+      "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
         urlEnd
     );
 
     console.log(
-      "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?" +
+      "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
         urlEnd
     );
 
