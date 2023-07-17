@@ -2,6 +2,7 @@
 // import "./App.css";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { SlideInDown } from "react-animated-components";
 
 const CLIENT_ID = "7f915cdb16e945578d294e9ee80673a5";
 const REDIRECT_URI = `${window.location}quilt`;
@@ -13,14 +14,15 @@ function Home() {
     <div className="App">
       <header className="App-header">
         <p>
-          Welcome to Quiltify! <br />
+          Welcome to Rainbowify! <br />
         </p>
-
-        <a
-          href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=user-top-read`}
-        >
-          Spotify Login
-        </a>
+        <SlideInDown>
+          <a
+            href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=user-top-read`}
+          >
+            Spotify Login
+          </a>{" "}
+        </SlideInDown>
       </header>
     </div>
   );
