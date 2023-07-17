@@ -1,16 +1,33 @@
 // import logo from "./logo.svg";
 // import "./App.css";
-import { useEffect, useState } from "react";
+import React, { useState, CSSProperties, useEffect } from "react";
+import {
+  useTransition,
+  animated,
+  AnimatedProps,
+  useSpringRef,
+} from "@react-spring/web";
+
 import axios from "axios";
 import { Row, Col, Image } from "antd";
 
+import Animation from "./Animation.tsx";
 import Red from "./Red";
+import Orange from "./Orange";
+import Yellow from "./Yellow";
+import Green from "./Green";
+import Blue from "./Blue";
+import Purple from "./Purple";
+import White from "./White";
+import Black from "./Black";
+import Grey from "./Grey";
+
 function Quilt() {
   const [id, setId] = useState("");
   const [topData, setTopData] = useState("");
   const [url, setUrl] = useState("");
   const [albumUrl, setAlbumUrl] = useState("");
-  const [red, setRed] = useState("");
+  const [colors, setColors] = useState("");
   const [blue, setBlue] = useState("");
 
   useEffect(() => {
@@ -140,7 +157,7 @@ function Quilt() {
         urlEnd
     );
     console.log(data);
-    setRed(data["red"]);
+    setColors(data);
 
     // console.log("making albums" + artWork);
 
@@ -157,7 +174,12 @@ function Quilt() {
   return (
     <div className="App">
       <header className="App-header">
-        {red ? <Red urls={red} /> : <p>Your Rainbow Is On The Way</p>}
+        {colors ? (
+          <Animation color={colors} />
+        ) : (
+          // <Red urls={colors["red"]} />
+          <p>Your Rainbow Is On The Way</p>
+        )}
       </header>
     </div>
   );
