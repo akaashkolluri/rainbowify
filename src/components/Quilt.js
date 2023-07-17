@@ -79,6 +79,7 @@ function Quilt() {
 
         if (!artWork.includes(albumUrl)) {
           artWork.push(albumUrl);
+          console.log("GO");
         }
       }
       topTracks = [...topTracks, ...data.items];
@@ -105,7 +106,7 @@ function Quilt() {
   };
 
   const makeAlbums = async (artWork) => {
-    console.log(artWork[0]);
+    console.log("num artwork" + artWork.length);
     let urlEnd = artWork.toString();
     const { data } = await axios.get(
       "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
