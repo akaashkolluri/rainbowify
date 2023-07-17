@@ -106,7 +106,7 @@ function Quilt() {
   return (
     <div className="App">
       <header className="App-header">
-        {red ? <Red urls={red} /> : <p>A Quilt is on the way!</p>}
+        {red ? <Red urls={red} /> : <p>Your Rainbow Is On The Way</p>}
       </header>
     </div>
   );
