@@ -14,12 +14,18 @@ import Purple from "./Purple";
 import Black from "./Black";
 import White from "./White";
 import Grey from "./Grey";
+import Start from "./Start";
 
 import styles from "../style/animation.module.css";
 
 const pages: ((
   props: AnimatedProps<{ style: CSSProperties }>
 ) => React.ReactElement)[] = [
+  ({ style, color }) => (
+    <animated.div style={{ ...style }}>
+      <Start urls={color["red"]}> </Start>
+    </animated.div>
+  ),
   ({ style, color }) => (
     <animated.div style={{ ...style }}>
       <Red urls={color["red"]}> </Red>
@@ -69,7 +75,7 @@ const pages: ((
 
 export default function Animation({ color }) {
   const [index, set] = useState(0);
-  const onClick = () => set((state) => (state + 1) % 9);
+  const onClick = () => set((state) => (state + 1) % 10);
   const transRef = useSpringRef();
   const transitions = useTransition(index, {
     ref: transRef,

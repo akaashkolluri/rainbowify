@@ -1,0 +1,54 @@
+body {
+  font-family: "Aileron";
+}
+
+.container {
+  /* background: rgb(77, 0, 2);
+    background: linear-gradient(
+      90deg,
+      rgba(77, 0, 2, 1) 0%,
+      rgba(255, 99, 116, 1) 50%,
+      rgba(77, 0, 2, 1) 100%
+    ); */
+  /* background-color: whitesmoke; */
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
+
+.area {
+  position: absolute;
+  /* background-color: #4d0002; */
+  border: 1px solid black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  /* width: 325px;
+  height: 582px; */
+}
+
+.area h1 {
+  position: relative;
+  color: black;
+  font-size: 24pt;
+  font-weight: 10;
+}
+
+.area h2 {
+  color: black;
+  font-size: 12pt;
+  font-weight: 10;
+}
+
+.headphone {
+  position: absolute;
+  left: 0pt;
+  height: 582pt;
+}
+/* .area img {
+    padding: 5px;
+    background-color: white;
+    position: relative;
+  } */
