@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Row, Col, Image } from "antd";
 
+import Red from "./Red";
 function Quilt() {
   const [id, setId] = useState("");
   const [topData, setTopData] = useState("");
@@ -87,8 +88,8 @@ function Quilt() {
       "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
         urlEnd
     );
-
     console.log(data);
+    setRed(data["red"]);
 
     // console.log("making albums" + artWork);
 
@@ -105,38 +106,7 @@ function Quilt() {
   return (
     <div className="App">
       <header className="App-header">
-        {url ? (
-          <div>
-            {" "}
-            <p> Your Quilt</p>
-            <Row>
-              <Image width={200} height={200} className="thumb" src={url[0]} />
-              <Image width={200} height={200} className="thumb" src={url[1]} />
-              <Image width={200} height={200} className="thumb" src={url[2]} />
-              <Image width={200} height={200} lassName="thumb" src={url[3]} />
-            </Row>
-            <Row>
-              <Image width={200} height={200} className="thumb" src={url[4]} />
-              <Image width={200} height={200} className="thumb" src={url[5]} />
-              <Image width={200} height={200} className="thumb" src={url[6]} />
-              <Image width={200} height={200} lassName="thumb" src={url[7]} />
-            </Row>
-            <Row>
-              <Image width={200} height={200} className="thumb" src={url[8]} />
-              <Image width={200} height={200} className="thumb" src={url[9]} />
-              <Image width={200} height={200} className="thumb" src={url[10]} />
-              <Image width={200} height={200} lassName="thumb" src={url[11]} />
-            </Row>
-            <Row>
-              <Image width={200} height={200} className="thumb" src={url[12]} />
-              <Image width={200} height={200} className="thumb" src={url[13]} />
-              <Image width={200} height={200} className="thumb" src={url[14]} />
-              <Image width={200} height={200} lassName="thumb" src={url[15]} />
-            </Row>
-          </div>
-        ) : (
-          <p>A Quilt is on the way!</p>
-        )}
+        {red ? <Red urls={red} /> : <p>A Quilt is on the way!</p>}
       </header>
     </div>
   );
