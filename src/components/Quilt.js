@@ -29,7 +29,7 @@ function Quilt() {
     let topTracks = [];
     let artWork = [];
 
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 20; i++) {
       const { data } = await axios.get(
         "https://api.spotify.com/v1/me/top/tracks",
         {
@@ -48,6 +48,34 @@ function Quilt() {
 
       for (let j = 0; j < data.items.length; j++) {
         let albumUrl = data.items[j].album.images[0].url;
+
+        if (!artWork.includes(albumUrl)) {
+          artWork.push(albumUrl);
+        }
+      }
+      topTracks = [...topTracks, ...data.items];
+    }
+
+    for (let i = 0; i < 30; i++) {
+      const { data } = await axios.get(
+        "https://api.spotify.com/v1/me/player/recently-played",
+        {
+          headers: {
+            Authorization: `Bearer ${id}`,
+          },
+          params: {
+            limit: 50,
+            offset: i * 50,
+          },
+        }
+      );
+
+      if (data.items.length == 0) break;
+
+      console.log("recently played" + i + " " + data.items.length);
+
+      for (let j = 0; j < data.items.length; j++) {
+        let albumUrl = data.items[j].track.album.images[0].url;
 
         if (!artWork.includes(albumUrl)) {
           artWork.push(albumUrl);
