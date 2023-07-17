@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_ID = process.env.CLIENT_ID2;
 const REDIRECT_URI = `${window.location}quilt`;
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
