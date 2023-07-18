@@ -23,8 +23,10 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
+  /* justify-content: center;
+  align-items: center; */
   margin: auto;
-  width: 600px;
+  width: 350px;
   height: 582px;
 }
 
@@ -33,7 +35,7 @@ body {
   margin-top: 0px;
   margin-bottom: 10px;
   font-family: sans-serif;
-  font-size: calc(20px + 8vmin);
+  font-size: calc(30px + 4vmin);
   background: linear-gradient(
     to right,
     #ef5350,
@@ -48,4 +50,48 @@ body {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.area h3 {
+  font-size: 12pt;
+  font-family: sans-serif;
+  font-weight: 200;
+  margin-bottom: 30pt;
+}
+
+.buttonGroup {
+  flex: 1;
+  flex-direction: row;
+  margin-top: 10pt;
+  cursor: hover;
+}
+
+.buttonGroup a {
+  font-size: 12pt;
+  margin-top: 20pt;
+  margin: 10pt;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.buttonGroup a:hover,
+.buttonGroup a:focus,
+.buttonGroup a:active {
+  background-image: linear-gradient(
+    45deg,
+    hsl(0, 100%, 90%),
+    hsl(30, 100%, 90%),
+    hsl(60, 100%, 90%),
+    hsl(90, 100%, 90%),
+    hsl(120, 100%, 90%),
+    hsl(150, 100%, 90%),
+    hsl(180, 100%, 90%),
+    hsl(210, 100%, 90%),
+    hsl(240, 100%, 90%),
+    hsl(270, 100%, 90%),
+    hsl(300, 100%, 90%),
+    hsl(330, 100%, 90%),
+    hsl(360, 100%, 90%)
+  );
+  font-size: 12pt;
 }

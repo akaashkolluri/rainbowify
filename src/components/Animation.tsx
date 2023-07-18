@@ -72,9 +72,9 @@ const pages: ((
   //     <White urls={color["white"]}> </White>
   //   </animated.div>
   // ),
-  ({ style, color }) => (
+  ({ style, color, onBack }) => (
     <animated.div style={{ ...style }}>
-      <End />
+      <End onBack={onBack} />
     </animated.div>
   ),
 ];
@@ -82,6 +82,7 @@ const pages: ((
 export default function Animation({ color }) {
   const [index, set] = useState(0);
   const onClick = () => set((state) => Math.min(state + 1, 8));
+  const goBack = () => set(0);
   const handleKeyDown = (event) => {
     console.log("User pressed: ", event.key);
     if (event.key === "ArrowRight") set((state) => Math.min(state + 1, 8));
@@ -110,7 +111,7 @@ export default function Animation({ color }) {
     >
       {transitions((style, i) => {
         const Page = pages[i];
-        return <Page style={style} color={color} />;
+        return <Page style={style} color={color} onBack={goBack} />;
       })}
     </div>
   );
