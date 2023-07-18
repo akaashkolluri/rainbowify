@@ -178,7 +178,29 @@ function Quilt() {
           <Animation color={colors} />
         ) : (
           // <Red urls={colors["red"]} />
-          <p>Your Rainbow Is On The Way</p>
+
+          /* 
+The follow is taken from https://codepen.io/jackrugile/pen/JddmaX */
+          <div class="loader">
+            <h1>Loading your Spotify rainbow</h1>
+            <div class="loader-inner">
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+            </div>
+          </div>
         )}
       </header>
     </div>

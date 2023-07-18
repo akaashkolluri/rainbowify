@@ -26,7 +26,7 @@ body {
   right: 0;
   margin: auto;
   /* width: 325px;
-  height: 582px; */
+    height: 582px; */
 }
 
 .area h1 {
@@ -46,6 +46,7 @@ body {
   position: absolute;
   left: 0pt;
   height: 582pt;
+  margin: auto;
 }
 /* .area img {
     padding: 5px;

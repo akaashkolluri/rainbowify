@@ -59,7 +59,9 @@ body {
   border-radius: 5pt;
   text-decoration: none;
   color: white;
+
   font-size: 12pt;
+  line-height: 5pt;
 }
 .spotifyButton:hover,
 .spotifyButton:active,

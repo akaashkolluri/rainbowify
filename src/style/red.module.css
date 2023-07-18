@@ -10,6 +10,8 @@ body {
     rgba(255, 99, 116, 1) 50%,
     rgba(77, 0, 2, 1) 100%
   ); */
+
+  border: 1px solid black;
   background-color: #4d0002;
   height: 100vh;
   width: 100vw;
