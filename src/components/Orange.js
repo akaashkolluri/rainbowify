@@ -1,4 +1,4 @@
-import styles from "../style/orange.module.css";
+import styles from "../style/orangemobile.module.css";
 import React from "react";
 import ReactWordcloud from "react-wordcloud";
 import { Image } from "antd";
