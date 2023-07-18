@@ -12,17 +12,17 @@ import axios from "axios";
 import { Row, Col, Image } from "antd";
 
 import Animation from "./Animation.tsx";
-import Red from "./Red";
-import Orange from "./Orange";
-import Yellow from "./Yellow";
-import Green from "./Green";
-import Blue from "./Blue";
-import Purple from "./Purple";
-import White from "./White";
-import Black from "./Black";
-import Grey from "./Grey";
+import Red from "./Red.js";
+import Orange from "./Orange.js";
+import Yellow from "./Yellow.js";
+import Green from "./Green.js";
+import Blue from "./Blue.js";
+import Purple from "./Purple.js";
+import White from "./White.js";
+import Black from "./Black.js";
+import Grey from "./Grey.js";
 
-function Quilt() {
+function Rainbow() {
   const [id, setId] = useState("");
   const [topData, setTopData] = useState("");
   const [url, setUrl] = useState("");
@@ -207,4 +207,4 @@ The follow is taken from https://codepen.io/jackrugile/pen/JddmaX */
   );
 }
 
-export default Quilt;
+export default Rainbow;

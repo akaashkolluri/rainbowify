@@ -15,6 +15,7 @@ import Black from "./Black";
 import White from "./White";
 import Grey from "./Grey";
 import Start from "./Start";
+import End from "./End";
 
 import styles from "../style/animation.module.css";
 
@@ -71,11 +72,24 @@ const pages: ((
   //     <White urls={color["white"]}> </White>
   //   </animated.div>
   // ),
+  ({ style, color }) => (
+    <animated.div style={{ ...style }}>
+      <End />
+    </animated.div>
+  ),
 ];
 
 export default function Animation({ color }) {
   const [index, set] = useState(0);
-  const onClick = () => set((state) => (state + 1) % 8);
+  const onClick = () => set((state) => Math.min(state + 1, 8));
+  const handleKeyDown = (event) => {
+    console.log("User pressed: ", event.key);
+    if (event.key === "ArrowRight") set((state) => Math.min(state + 1, 8));
+    if (event.key === "ArrowLeft") set((state) => Math.max(state - 1, 0));
+    if (event.key === "r") set(0);
+    if (event.key == " ") set((state) => Math.min(state + 1, 8));
+  };
+
   const transRef = useSpringRef();
   const transitions = useTransition(index, {
     ref: transRef,
@@ -88,7 +102,12 @@ export default function Animation({ color }) {
     transRef.start();
   }, [index]);
   return (
-    <div className={`flex fill ${styles.container}`} onClick={onClick}>
+    <div
+      className={`flex fill ${styles.container}`}
+      onClick={onClick}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+    >
       {transitions((style, i) => {
         const Page = pages[i];
         return <Page style={style} color={color} />;
