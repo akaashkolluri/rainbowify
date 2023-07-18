@@ -56,26 +56,26 @@ const pages: ((
       <Purple urls={color["purple"]}> </Purple>
     </animated.div>
   ),
-  ({ style, color }) => (
-    <animated.div style={{ ...style }}>
-      <Black urls={color["black"]}> </Black>
-    </animated.div>
-  ),
+  // ({ style, color }) => (
+  //   <animated.div style={{ ...style }}>
+  //     <Black urls={color["black"]}> </Black>
+  //   </animated.div>
+  // ),
   ({ style, color }) => (
     <animated.div style={{ ...style }}>
       <Grey urls={color["grey"]}> </Grey>
     </animated.div>
   ),
-  ({ style, color }) => (
-    <animated.div style={{ ...style }}>
-      <White urls={color["white"]}> </White>
-    </animated.div>
-  ),
+  // ({ style, color }) => (
+  //   <animated.div style={{ ...style }}>
+  //     <White urls={color["white"]}> </White>
+  //   </animated.div>
+  // ),
 ];
 
 export default function Animation({ color }) {
   const [index, set] = useState(0);
-  const onClick = () => set((state) => (state + 1) % 10);
+  const onClick = () => set((state) => (state + 1) % 8);
   const transRef = useSpringRef();
   const transitions = useTransition(index, {
     ref: transRef,
