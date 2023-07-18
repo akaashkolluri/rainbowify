@@ -27,7 +27,7 @@ function End({ onBack }) {
         <div className={styles.buttonGroup}>
           {" "}
           <a onClick={onBack}>{"  Back  "}</a>{" "}
-          <a onClick={notify}>{"  Share   "}</a> <a href={home}>{"  Home  "}</a>
+          <a onClick={notify}>{"  Share   "}</a> <a href={"https://rainbowify.vercel.app/"</div>}>{"  Home  "}</a>
         </div>
       </div>
     </div>
