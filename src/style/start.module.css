@@ -14,6 +14,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: white;
+  border: white;
 }
 
 .area {
@@ -25,8 +26,10 @@ body {
   left: 0;
   right: 0;
   margin: auto;
-  /* width: 325px;
-    height: 582px; */
+  width: 350px;
+  height: 430px;
+  /* /* width: 325px; */
+  /* height: 582px; */
 }
 
 .area h1 {
@@ -45,8 +48,9 @@ body {
 .headphone {
   position: absolute;
   left: 0pt;
-  height: 582pt;
+  height: 530pt;
   margin: auto;
+  border-color: 2px solid black;
 }
 /* .area img {
     padding: 5px;
