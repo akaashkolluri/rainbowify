@@ -21,7 +21,7 @@ function End({ onBack }) {
           {" "}
           <a onClick={onBack}>{"  Back  "}</a>{" "}
           {/* <a onClick={notify}>{"  Share   "}</a> */}
-          <a href={home}>{"  Home  "}</a>
+          <a href={"https://rainbowify.vercel.app"}>{"  Home  "}</a>
         </div>
       </div>
     </div>
