@@ -44,6 +44,13 @@ body {
   /* color: white; */
 }
 
+.logo {
+  margin-top: -20px;
+  position: relative;
+  top: 9.5pt;
+  left: -5pt;
+}
+
 .spotifyButton {
   padding: 10pt;
   background-color: black;
@@ -54,16 +61,15 @@ body {
   color: white;
   font-size: 12pt;
 }
-.logo {
-  margin-top: -20px;
-  position: relative;
-  top: 9.5pt;
-  left: -5pt;
-}
-
 .spotifyButton:hover,
 .spotifyButton:active,
 .spotifyButton:focus {
   background-color: #1db954;
   color: black;
+  padding: 10pt;
+  padding-left: 15pt;
+
+  padding-right: 15pt;
+  border-radius: 5pt;
+  text-decoration: none;
 }
