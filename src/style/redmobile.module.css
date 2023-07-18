@@ -1,0 +1,239 @@
+body {
+  font-family: "Aileron";
+}
+
+.container {
+  /* background: rgb(77, 0, 2);
+  background: linear-gradient(
+    90deg,
+    rgba(77, 0, 2, 1) 0%,
+    rgba(255, 99, 116, 1) 50%,
+    rgba(77, 0, 2, 1) 100%
+  ); */
+
+  /* border: 1px solid black; */
+  background-color: #4d0002;
+  height: 100vh;
+  width: 100vw;
+}
+
+.area {
+  position: absolute;
+  /* background-color: #4d0002; */
+  border: 1px solid black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 380px;
+  height: 500px;
+}
+
+/* .area img {
+  padding: 5px;
+  background-color: white;
+  position: relative;
+} */
+
+.img1 {
+  position: absolute;
+  margin: 4px;
+  top: 54px;
+  left: 94px;
+  height: 90px;
+  width: 90px;
+}
+
+.img2 {
+  position: absolute;
+  margin: 4px;
+  top: 54px;
+  left: 188px;
+  height: 90px;
+  width: 90px;
+}
+
+.img3 {
+  position: absolute;
+  margin: 4px;
+  top: 54px;
+  left: 282px;
+  height: 90px;
+  width: 90px;
+}
+
+.img4 {
+  position: absolute;
+  margin: 4px;
+  top: 148px;
+  left: 0px;
+  height: 90px;
+  width: 90px;
+}
+
+.img5 {
+  position: absolute;
+  margin: 4px;
+  top: 148px;
+  left: 94px;
+  height: 90px;
+  width: 90px;
+}
+
+.img6 {
+  position: absolute;
+  margin: 4px;
+  top: 148px;
+  left: 188px;
+  height: 90px;
+  width: 90px;
+}
+
+.img7 {
+  position: absolute;
+  margin: 4px;
+  top: 148px;
+  left: 282px;
+  height: 90px;
+  width: 90px;
+}
+
+/* .img8 {
+  position: absolute;
+  margin: 4px;
+  top: 280px;
+  left: 0px;
+  height: 90px;
+  width: 90px;
+  background-color: red;
+} */
+
+.img8 {
+  position: absolute;
+  margin: 4px;
+  top: 242px;
+  left: 94px;
+  height: 90px;
+  width: 90px;
+}
+
+.img9 {
+  position: absolute;
+  margin: 4px;
+  top: 242px;
+  left: 188px;
+  height: 90px;
+  width: 90px;
+}
+
+.img10 {
+  position: absolute;
+  margin: 4px;
+  top: 242px;
+  left: 282px;
+  height: 90px;
+  width: 90px;
+}
+.img11 {
+  position: absolute;
+  margin: 4px;
+  top: 336px;
+  left: 0px;
+  height: 90px;
+  width: 90px;
+}
+
+.img12 {
+  position: absolute;
+  margin: 4px;
+  top: 336px;
+  left: 94px;
+  height: 90px;
+  width: 90px;
+}
+
+.img13 {
+  position: absolute;
+  margin: 4px;
+  top: 336px;
+  left: 282px;
+  height: 90px;
+  width: 90px;
+}
+
+.red {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  width: 98px;
+}
+
+.block1 {
+  background-color: #890e0e;
+  height: 54px;
+  width: 90px;
+  position: absolute;
+  top: 0;
+  left: 98px;
+}
+
+.block2 {
+  background-color: #721a22;
+  height: 54px;
+  width: 184px;
+  position: absolute;
+  top: 0;
+  left: 192px;
+}
+
+.block3 {
+  background-color: #721a22;
+  position: absolute;
+  margin-top: 4px;
+  top: 242px;
+  left: 4px;
+  height: 90px;
+  width: 90px;
+}
+
+.block4 {
+  background-color: #89090c;
+  position: absolute;
+  margin: 4px;
+  top: 430px;
+  left: 0px;
+  height: 70px;
+  width: 90px;
+}
+
+.block5 {
+  background-color: #961c1d;
+  position: absolute;
+  margin: 4px;
+  top: 430px;
+  left: 94px;
+  height: 70px;
+  width: 90px;
+}
+
+.block6 {
+  background-color: #961c1d;
+  position: absolute;
+  margin: 4px;
+  top: 336px;
+  left: 188px;
+  height: 164px;
+  width: 90px;
+}
+
+.block7 {
+  background-color: #721a22;
+  position: absolute;
+  margin: 4px;
+  top: 430px;
+  left: 282px;
+  height: 70px;
+  width: 90px;
+}

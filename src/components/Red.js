@@ -1,4 +1,4 @@
-import styles from "../style/red.module.css";
+import styles from "../style/redmobile.module.css";
 import React from "react";
 import ReactWordcloud from "react-wordcloud";
 import { Image } from "antd";
