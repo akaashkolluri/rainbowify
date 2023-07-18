@@ -1,8 +1,8 @@
-import styles from "../style/yellow.module.css";
+import styles from "../style/yellowmobile.module.css";
 import React from "react";
 import ReactWordcloud from "react-wordcloud";
 import { Image } from "antd";
-import RedLogo from "../red.png";
+import YellowLogo from "../yellow.png";
 // import "./App.css";
 import "@fontsource/aileron";
 
@@ -23,7 +23,7 @@ function Yellow({ urls }) {
         <img className={styles.img11} src={urls[10]} />
         <img className={styles.img12} src={urls[11]} />
         <img className={styles.img13} src={urls[12]} />
-        {/* <img className={styles.Orange} src={RedLogo} /> */}
+
         <div className={styles.block1} />
         <div className={styles.block2} />
         <div className={styles.block3} />
@@ -31,6 +31,13 @@ function Yellow({ urls }) {
         <div className={styles.block5} />
         <div className={styles.block6} />
         <div className={styles.block7} />
+        <div className={styles.block8} />
+        <div className={styles.block9} />
+        <div className={styles.block10} />
+        <div className={styles.block11} />
+        <div className={styles.block12} />
+        <div className={styles.block13} />
+        <img className={styles.yellow} src={YellowLogo} />
       </div>
     </div>
   );

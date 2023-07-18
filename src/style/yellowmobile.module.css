@@ -1,0 +1,300 @@
+body {
+  font-family: "Aileron";
+}
+
+.container {
+  /* background: rgb(77, 0, 2);
+    background: linear-gradient(
+      90deg,
+      rgba(77, 0, 2, 1) 0%,
+      rgba(255, 99, 116, 1) 50%,
+      rgba(77, 0, 2, 1) 100%
+    ); */
+
+  /* border: 1px solid black; */
+  background-color: #fff6aa;
+  height: 100vh;
+  width: 100vw;
+}
+
+.area {
+  position: absolute;
+  /* background-color: #4d0002; */
+  /* border: 1px solid black; */
+  top: -4px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 380px;
+  height: 500px;
+}
+
+/* .area img {
+  margin: 5px;
+
+  /* position: relative; 
+} */
+
+.img1 {
+  position: absolute;
+  margin: 9px;
+  top: 74px;
+  left: 0px;
+  height: 85px;
+  width: 85px;
+}
+
+.img2 {
+  position: absolute;
+  margin: 9px;
+  top: 168px;
+  left: 0px;
+  height: 85px;
+  width: 85px;
+}
+
+.img3 {
+  position: absolute;
+  margin: 9px;
+  top: 262px;
+  left: 0px;
+  height: 85px;
+  width: 85px;
+}
+
+.img4 {
+  position: absolute;
+  margin: 9px;
+  top: 24px;
+  left: 94px;
+  height: 85px;
+  width: 85px;
+}
+
+.img5 {
+  position: absolute;
+  margin: 9px;
+  top: 118px;
+  left: 94px;
+  height: 85px;
+  width: 85px;
+}
+
+.img6 {
+  position: absolute;
+  margin: 9px;
+  top: 212px;
+  left: 94px;
+  height: 85px;
+  width: 85px;
+}
+
+.img7 {
+  position: absolute;
+  margin: 9px;
+  top: 306px;
+  left: 94px;
+  height: 85px;
+  width: 85px;
+}
+
+/* .img8 {
+    position: absolute;
+    margin: 9px;
+    top: 280px;
+    left: 0px;
+    height: 85px;
+    width: 85px;
+    background-color: red;
+  } */
+
+.img8 {
+  position: absolute;
+  margin: 9px;
+  top: 168px;
+  left: 188px;
+  height: 85px;
+  width: 85px;
+}
+
+.img9 {
+  position: absolute;
+  margin: 9px;
+  top: 262px;
+  left: 188px;
+  height: 85px;
+  width: 85px;
+}
+
+.img10 {
+  position: absolute;
+  margin: 9px;
+  top: 356px;
+  left: 188px;
+  height: 85px;
+  width: 85px;
+}
+.img11 {
+  position: absolute;
+  margin: 9px;
+  top: 109px;
+  left: 282px;
+  height: 85px;
+  width: 85px;
+}
+
+.img12 {
+  position: absolute;
+  margin: 9px;
+  top: 203px;
+  left: 282px;
+  height: 85px;
+  width: 85px;
+}
+
+.img13 {
+  position: absolute;
+  margin: 9px;
+  top: 297px;
+  left: 282px;
+  height: 85px;
+  width: 85px;
+}
+
+.yellow {
+  position: absolute;
+  top: 410px;
+  left: 25px;
+
+  width: 130px;
+}
+
+.block1 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 0px;
+  left: 0px;
+  height: 65px;
+  width: 85px;
+}
+
+.block2 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 356px;
+  left: 0px;
+  height: 85px;
+  width: 85px;
+}
+.block3 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 450px;
+  left: 0px;
+  height: 50px;
+  width: 85px;
+}
+
+.block4 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 0px;
+  left: 94px;
+  height: 15px;
+  width: 85px;
+}
+
+.block5 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 400px;
+  left: 94px;
+  height: 85px;
+  width: 85px;
+}
+
+.block6 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 494px;
+  left: 94px;
+  height: 6px;
+  width: 85px;
+}
+
+.block7 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 0px;
+  left: 188px;
+  height: 65px;
+  width: 85px;
+}
+
+.block8 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 74px;
+  left: 188px;
+  height: 85px;
+  width: 85px;
+}
+
+.block9 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 450px;
+  left: 188px;
+  height: 50px;
+  width: 85px;
+}
+
+.block10 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 0px;
+  left: 282px;
+  height: 6px;
+  width: 85px;
+}
+
+.block11 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 15px;
+  left: 282px;
+  height: 85px;
+  width: 85px;
+}
+
+.block12 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 391px;
+  left: 282px;
+  height: 85px;
+  width: 85px;
+}
+
+.block13 {
+  background: linear-gradient(#ffde59, #ff914d);
+  position: absolute;
+  margin: 9px;
+  top: 485px;
+  left: 282px;
+  height: 15px;
+  width: 85px;
+}
