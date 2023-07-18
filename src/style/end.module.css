@@ -95,3 +95,8 @@ body {
   );
   font-size: 12pt;
 }
+
+.buttonGroup a:visited {
+  text-decoration: none;
+  color: black;
+}
