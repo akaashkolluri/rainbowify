@@ -8,7 +8,7 @@ import Icon from "@mdi/react";
 import { mdiSpotify } from "@mdi/js";
 
 const CLIENT_ID = "7f915cdb16e945578d294e9ee80673a5";
-const REDIRECT_URI = `${window.location}quilt`;
+const REDIRECT_URI = `${window.location}rainbow`;
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
 
