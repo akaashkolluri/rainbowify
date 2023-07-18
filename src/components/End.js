@@ -8,10 +8,17 @@ import Icon from "@mdi/react";
 import { mdiSpotify } from "@mdi/js";
 import { Button, message, Space } from "antd";
 
+
 let url = window.location.href;
 let home = url.split("rainbow")[0];
 
 function End({ onBack }) {
+  const notify = () => {
+    message.open({
+      type: "success",
+      content: "The share function is coming soon",
+    });
+  };
   return (
     <div className={styles.container}>
       <div className={styles.area}>
@@ -20,8 +27,7 @@ function End({ onBack }) {
         <div className={styles.buttonGroup}>
           {" "}
           <a onClick={onBack}>{"  Back  "}</a>{" "}
-          {/* <a onClick={notify}>{"  Share   "}</a> */}
-          <a href={"https://rainbowify.vercel.app"}>{"  Home  "}</a>
+          <a onClick={notify}>{"  Share   "}</a> <a href={home}>{"  Home  "}</a>
         </div>
       </div>
     </div>
