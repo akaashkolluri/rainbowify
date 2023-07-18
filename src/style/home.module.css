@@ -55,7 +55,10 @@ body {
   font-size: 12pt;
 }
 .logo {
-  
+  margin-top: -20px;
+  position: relative;
+  top: 9.5pt;
+  left: -5pt;
 }
 
 .spotifyButton:hover,
@@ -63,7 +66,4 @@ body {
 .spotifyButton:focus {
   background-color: #1db954;
   color: black;
-  /* padding: 15pt;
-  border-radius: 20pt;
-  text-decoration: none; */
 }

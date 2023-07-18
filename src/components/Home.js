@@ -23,7 +23,8 @@ function Home() {
             className={styles.spotifyButton}
             href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=user-top-read user-read-recently-played user-library-read`}
           >
-            <Icon path={mdiSpotify} size={1.5} className={styles.logo}/> {"    Login with Spotify"}
+            <Icon path={mdiSpotify} size={1.5} className={styles.logo} />{" "}
+            {"    Login with Spotify"}
           </a>{" "}
         </SlideInDown>
       </header>
