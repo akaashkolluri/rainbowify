@@ -62,11 +62,11 @@ const pages: ((
   //     <Black urls={color["black"]}> </Black>
   //   </animated.div>
   // ),
-  ({ style, color }) => (
-    <animated.div style={{ ...style }}>
-      <Grey urls={color["grey"]}> </Grey>
-    </animated.div>
-  ),
+  // ({ style, color }) => (
+  //   <animated.div style={{ ...style }}>
+  //     <Grey urls={color["grey"]}> </Grey>
+  //   </animated.div>
+  // ),
   // ({ style, color }) => (
   //   <animated.div style={{ ...style }}>
   //     <White urls={color["white"]}> </White>
@@ -81,14 +81,14 @@ const pages: ((
 
 export default function Animation({ color }) {
   const [index, set] = useState(0);
-  const onClick = () => set((state) => Math.min(state + 1, 8));
+  const onClick = () => set((state) => Math.min(state + 1, 7));
   const goBack = () => set(0);
   const handleKeyDown = (event) => {
     console.log("User pressed: ", event.key);
-    if (event.key === "ArrowRight") set((state) => Math.min(state + 1, 8));
+    if (event.key === "ArrowRight") set((state) => Math.min(state + 1, 7));
     if (event.key === "ArrowLeft") set((state) => Math.max(state - 1, 0));
     if (event.key === "r") set(0);
-    if (event.key == " ") set((state) => Math.min(state + 1, 8));
+    if (event.key == " ") set((state) => Math.min(state + 1, 7));
   };
 
   const transRef = useSpringRef();
