@@ -10,7 +10,7 @@ body {
       rgba(255, 99, 116, 1) 50%,
       rgba(77, 0, 2, 1) 100%
     ); */
-  background-color: orange;
+  background-color: #ed5f1e;
   height: 100vh;
   width: 100vw;
 }
@@ -28,76 +28,90 @@ body {
   height: 582px;
 }
 
-/* .area img {
-    padding: 5px;
-    background-color: white;
-    position: relative;
-  } */
+.area img {
+  border: 0px;
+}
 
 .img1 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 70px;
-  left: 105px;
-  height: 100px;
-  width: 100px;
+  top: 30px;
+  right: 210px;
+  height: 90px;
+  width: 90px;
 }
 
 .img2 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 70px;
-  left: 210px;
-  height: 100px;
-  width: 100px;
+  top: 135px;
+  right: 210px;
+  height: 140px;
+  width: 140px;
 }
 
 .img3 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 70px;
-  left: 315px;
-  height: 100px;
-  width: 100px;
+  top: 290px;
+  right: 210px;
+  height: 120px;
+  width: 120px;
 }
 
 .img4 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 175px;
-  left: 0px;
-  height: 100px;
-  width: 100px;
+  top: 290px;
+  right: 345px;
+  height: 90px;
+  width: 90px;
 }
-
 .img5 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 175px;
-  left: 105px;
-  height: 100px;
-  width: 100px;
+  top: 425px;
+  right: 210px;
+  height: 70px;
+  width: 70px;
 }
 
 .img6 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 175px;
-  left: 210px;
-  height: 100px;
-  width: 100px;
+  top: 50px;
+  right: 315px;
+  height: 70px;
+  width: 70px;
 }
 
 .img7 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 175px;
-  left: 315px;
-  height: 100px;
-  width: 100px;
+  top: 425px;
+  right: 295px;
+  height: 50px;
+  width: 50px;
 }
 
-/* .img8 {
+/* .img8 
+{
+    padding: 5px;
+  background-color: #ffad69;
     position: absolute;
     margin: 5px;
     top: 280px;
@@ -108,69 +122,92 @@ body {
   } */
 
 .img8 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 280px;
-  left: 105px;
-  height: 100px;
-  width: 100px;
+  top: 10px;
+  left: 210px;
+  height: 80px;
+  width: 80px;
 }
 
 .img9 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 280px;
+  top: 105px;
   left: 210px;
-  height: 100px;
-  width: 100px;
+  height: 110px;
+  width: 110px;
 }
 
 .img10 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 280px;
-  left: 315px;
-  height: 100px;
-  width: 100px;
+  top: 230px;
+  left: 210px;
+  height: 130px;
+  width: 130px;
 }
 .img11 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 385px;
-  left: 0px;
-  height: 100px;
-  width: 100px;
+  top: 375px;
+  left: 210px;
+  height: 90px;
+  width: 90px;
 }
 
 .img12 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 385px;
-  left: 105px;
-  height: 100px;
-  width: 100px;
+  top: 375px;
+  left: 315px;
+  height: 70px;
+  width: 70px;
 }
 
 .img13 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
   margin: 5px;
-  top: 385px;
-  left: 315px;
-  height: 100px;
-  width: 100px;
+  top: 155px;
+  left: 335px;
+  height: 60px;
+  width: 60px;
 }
 
-.red {
+.img14 {
+  padding: 5px;
+  background-color: #ffad69;
   position: absolute;
-  top: 0px;
+  margin: 5px;
+  top: 25px;
+  left: 305px;
+  height: 65px;
+  width: 65px;
+}
+
+.orange {
+  position: absolute;
+  top: -20px;
   left: 0px;
-  height: 175px;
-  width: 110px;
+  height: 50px;
+  padding: -5px;
 }
 
 .block1 {
   background-color: #890e0e;
-  height: 70px;
+  height: 0px;
   width: 100px;
   position: absolute;
   top: 0;
