@@ -3,7 +3,7 @@ import { Button, Modal } from "antd";
 import ReactWordcloud from "react-wordcloud";
 import { Image } from "antd";
 import BlueLogo from "../blue.png";
-import SpotifyLogo from "../Spotify_Logo_RGB_White.png";
+import SpotifyLogo from "../Spotify_Logo_RGB_Black.png";
 // import "./App.css";
 import "@fontsource/aileron";
 
@@ -63,6 +63,15 @@ function ClickableImage({ src, style, albumData, backOne }) {
         onCancel={handleCancel}
         width={350}
         footer={[
+          <img
+            src={SpotifyLogo}
+            style={{
+              width: 90,
+              marginRight: 23,
+              top: 8,
+              position: "relative",
+            }}
+          />,
           <Button key="back" onClick={handleCancel}>
             Return
           </Button>,
@@ -73,7 +82,7 @@ function ClickableImage({ src, style, albumData, backOne }) {
             type="primary"
             onClick={handleOk}
           >
-            View on Spotify
+            On Spotify
           </Button>,
         ]}
       >
