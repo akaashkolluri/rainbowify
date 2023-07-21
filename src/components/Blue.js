@@ -3,12 +3,13 @@ import React from "react";
 import ReactWordcloud from "react-wordcloud";
 import { Image } from "antd";
 import BlueLogo from "../blue.png";
+import SpotifyLogo from "../Spotify_Logo_RGB_White.png";
 // import "./App.css";
 import "@fontsource/aileron";
 
 function Blue({ urls }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="print2">
       <div className={styles.area}>
         <img className={styles.img1} src={urls[0]} />
         <img className={styles.img2} src={urls[1]} />
@@ -31,6 +32,7 @@ function Blue({ urls }) {
         <div className={styles.block5} />
         <div className={styles.block6} />
         <div className={styles.block7} />
+        <img className={styles.spotify} src={SpotifyLogo} />
       </div>
     </div>
   );

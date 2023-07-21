@@ -15,6 +15,27 @@ body {
   width: 100vw;
 }
 
+.printarea {
+  position: absolute;
+  /* background-color: #4d0002; */
+  /* border: 1px solid black; */
+  top: 0;
+  bottom: 0;
+  left: 380px;
+  right: 0;
+  background-color: #ed5f1e;
+  width: 380px;
+  height: 500px;
+}
+
+.spotify {
+  position: absolute;
+  top: 475px;
+  left: 7px;
+
+  width: 85px;
+}
+
 .area {
   position: absolute;
   /* background-color: #4d0002; */

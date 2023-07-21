@@ -1,7 +1,26 @@
 body {
   font-family: "Aileron";
 }
+.printarea {
+  position: absolute;
+  /* background-color: #4d0002; */
+  /* border: 1px solid black; */
+  top: 500px;
+  bottom: 0;
+  left: 380px;
+  right: 0;
+  background-color: #fff6aa;
+  width: 380px;
+  height: 520px;
+}
 
+.spotify {
+  position: absolute;
+  top: 480px;
+  left: 11px;
+
+  width: 80px;
+}
 .container {
   /* background: rgb(77, 0, 2);
     background: linear-gradient(

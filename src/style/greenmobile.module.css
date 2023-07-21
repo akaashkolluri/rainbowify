@@ -28,6 +28,27 @@ body {
   height: 500px;
 }
 
+.printarea {
+  position: absolute;
+  /* background-color: #4d0002; */
+  /* border: 1px solid black; */
+  top: 500px;
+  bottom: 0;
+  left: 0px;
+  right: 0;
+  background-color: #6da654;
+  width: 380px;
+  height: 520px;
+}
+
+.spotify {
+  position: absolute;
+  top: 475px;
+  left: 7px;
+
+  width: 85px;
+}
+
 .area img {
   border: 0px;
 }

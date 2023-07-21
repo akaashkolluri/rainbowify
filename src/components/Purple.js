@@ -3,6 +3,7 @@ import React from "react";
 import ReactWordcloud from "react-wordcloud";
 import { Image } from "antd";
 import PurpleLogo from "../purple.png";
+import SpotifyLogo from "../Spotify_Logo_RGB_White.png";
 // import "./App.css";
 import "@fontsource/aileron";
 
@@ -38,6 +39,7 @@ function Purple({ urls }) {
         <div className={styles.block12} />
         <div className={styles.block13} />
         <img className={styles.purple} src={PurpleLogo} />
+        <img className={styles.spotify} src={SpotifyLogo} />
       </div>
     </div>
   );

@@ -20,6 +20,7 @@
     "colorthief": "^2.4.0",
     "dominant-color": "0.0.1",
     "get-pixels": "^3.3.3",
+    "html2canvas": "^1.4.1",
     "pixel-paradise": "0.0.1",
     "react": "^18.2.0",
     "react-animated-components": "^4.0.0",

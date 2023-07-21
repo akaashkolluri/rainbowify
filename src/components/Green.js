@@ -4,6 +4,7 @@ import ReactWordcloud from "react-wordcloud";
 import { Image } from "antd";
 import GreenLogo from "../green.png";
 // import "./App.css";
+import SpotifyLogo from "../Spotify_Logo_RGB_White.png";
 import "@fontsource/aileron";
 
 function Green({ urls }) {
@@ -25,6 +26,7 @@ function Green({ urls }) {
         <img className={styles.img13} src={urls[12]} />
         <img className={styles.img14} src={urls[13]} />
         <img className={styles.green} src={GreenLogo} />
+        <img className={styles.spotify} src={SpotifyLogo} />
       </div>
     </div>
   );

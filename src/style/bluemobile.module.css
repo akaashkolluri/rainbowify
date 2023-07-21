@@ -29,6 +29,27 @@ body {
   width: 380px;
   height: 500px;
 }
+.spotify {
+  position: absolute;
+  top: 475px;
+  left: 7px;
+
+  width: 85px;
+}
+
+.printarea {
+  position: absolute;
+  /* background-color: #4d0002; */
+  /* border: 1px solid black; */
+  background-color: #03047b;
+  top: 1020px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* margin: auto; */
+  width: 380px;
+  height: 520px;
+}
 
 /* .area img {
     padding: 5px;

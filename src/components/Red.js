@@ -3,6 +3,7 @@ import React from "react";
 import ReactWordcloud from "react-wordcloud";
 import { Image } from "antd";
 import RedLogo from "../red.png";
+import SpotifyLogo from "../Spotify_Logo_RGB_White.png";
 // import "./App.css";
 import "@fontsource/aileron";
 
@@ -31,6 +32,7 @@ function Red({ urls }) {
         <div className={styles.block5} />
         <div className={styles.block6} />
         <div className={styles.block7} />
+        <img className={styles.spotify} src={SpotifyLogo} />
       </div>
     </div>
   );

@@ -74,7 +74,7 @@ const pages: ((
   // ),
   ({ style, color, onBack }) => (
     <animated.div style={{ ...style }}>
-      <End onBack={onBack} />
+      <End onBack={onBack} urls={color} />
     </animated.div>
   ),
 ];
