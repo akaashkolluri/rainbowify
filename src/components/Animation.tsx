@@ -22,66 +22,79 @@ import styles from "../style/animation.module.css";
 const pages: ((
   props: AnimatedProps<{ style: CSSProperties }>
 ) => React.ReactElement)[] = [
-  ({ style, color }) => (
+  ({ style, color, metaData }) => (
     <animated.div style={{ ...style }}>
       <Start urls={color["red"]}> </Start>
     </animated.div>
   ),
-  ({ style, color }) => (
+  ({ style, color, metaData, backOne }) => (
     <animated.div style={{ ...style }}>
-      <Red urls={color["red"]}> </Red>
+      <Red urls={color["red"]} metaData={metaData} backOne={backOne}>
+        {" "}
+      </Red>
     </animated.div>
   ),
-  ({ style, color }) => (
+  ({ style, color, metaData, backOne }) => (
     <animated.div style={{ ...style }}>
-      <Orange urls={color["orange"]}> </Orange>
+      <Orange urls={color["orange"]} metaData={metaData} backOne={backOne}>
+        {" "}
+      </Orange>
     </animated.div>
   ),
-  ({ style, color }) => (
+  ({ style, color, metaData, backOne }) => (
     <animated.div style={{ ...style }}>
-      <Yellow urls={color["yellow"]}> </Yellow>
+      <Yellow urls={color["yellow"]} metaData={metaData} backOne={backOne}>
+        {" "}
+      </Yellow>
     </animated.div>
   ),
-  ({ style, color }) => (
+  ({ style, color, metaData, backOne }) => (
     <animated.div style={{ ...style }}>
-      <Green urls={color["green"]}> </Green>
+      <Green urls={color["green"]} metaData={metaData} backOne={backOne}>
+        {" "}
+      </Green>
     </animated.div>
   ),
-  ({ style, color }) => (
+  ({ style, color, metaData, backOne }) => (
     <animated.div style={{ ...style }}>
-      <Blue urls={color["blue"]}> </Blue>
+      <Blue urls={color["blue"]} metaData={metaData} backOne={backOne}>
+        {" "}
+      </Blue>
     </animated.div>
   ),
-  ({ style, color }) => (
+  ({ style, color, metaData, backOne }) => (
     <animated.div style={{ ...style }}>
-      <Purple urls={color["purple"]}> </Purple>
+      <Purple urls={color["purple"]} metaData={metaData} backOne={backOne}>
+        {" "}
+      </Purple>
     </animated.div>
   ),
-  // ({ style, color }) => (
+  // ({ style, color, backOne }) => (
   //   <animated.div style={{ ...style }}>
   //     <Black urls={color["black"]}> </Black>
   //   </animated.div>
   // ),
-  // ({ style, color }) => (
+  // ({ style, color, backOne }) => (
   //   <animated.div style={{ ...style }}>
   //     <Grey urls={color["grey"]}> </Grey>
   //   </animated.div>
   // ),
-  // ({ style, color }) => (
+  // ({ style, color, backOne }) => (
   //   <animated.div style={{ ...style }}>
   //     <White urls={color["white"]}> </White>
   //   </animated.div>
   // ),
-  ({ style, color, onBack }) => (
+  ({ style, color, onBack, metaData }) => (
     <animated.div style={{ ...style }}>
-      <End onBack={onBack} urls={color} />
+      <End onBack={onBack} urls={color} metaData={metaData} />
     </animated.div>
   ),
 ];
 
-export default function Animation({ color }) {
+export default function Animation({ color, metaData }) {
   const [index, set] = useState(0);
   const onClick = () => set((state) => Math.min(state + 1, 7));
+  const backOne = () => set((state) => Math.max(state - 1, 0));
   const goBack = () => set(0);
   const handleKeyDown = (event) => {
     console.log("User pressed: ", event.key);
@@ -111,7 +124,15 @@ export default function Animation({ color }) {
     >
       {transitions((style, i) => {
         const Page = pages[i];
-        return <Page style={style} color={color} onBack={goBack} />;
+        return (
+          <Page
+            style={style}
+            color={color}
+            onBack={goBack}
+            backOne={backOne}
+            metaData={metaData}
+          />
+        );
       })}
     </div>
   );

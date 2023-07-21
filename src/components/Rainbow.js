@@ -26,6 +26,7 @@ function Rainbow() {
   const [id, setId] = useState("");
   const [topData, setTopData] = useState("");
   const [url, setUrl] = useState("");
+  const [metaData, setMetaData] = useState("");
   const [albumUrl, setAlbumUrl] = useState("");
   const [colors, setColors] = useState("");
   const [blue, setBlue] = useState("");
@@ -45,6 +46,7 @@ function Rainbow() {
   const makeQuilt = async (id) => {
     let topTracks = [];
     let artWork = [];
+    let metaData = [];
 
     for (let i = 0; i < 20; i++) {
       const { data } = await axios.get(
@@ -68,6 +70,7 @@ function Rainbow() {
 
         if (!artWork.includes(albumUrl)) {
           artWork.push(albumUrl);
+          metaData[albumUrl] = data.items[j].album;
         }
       }
       topTracks = [...topTracks, ...data.items];
@@ -91,6 +94,7 @@ function Rainbow() {
         console.log("album of saved track");
         if (!artWork.includes(albumUrl)) {
           artWork.push(albumUrl);
+          metaData[albumUrl] = data.items[j].track.album;
         }
       }
       topTracks = [...topTracks, ...data.items];
@@ -128,6 +132,7 @@ function Rainbow() {
     // console.log(artWork);
     setTopData(topTracks);
     setAlbumUrl(artWork);
+    setMetaData(metaData);
 
     makeAlbums(artWork);
 
@@ -157,6 +162,16 @@ function Rainbow() {
         urlEnd
     );
     console.log(data);
+
+    for (let i = 0; i < 14; i++) {
+      data["red"].push("empty");
+      data["orange"].push("empty");
+      data["yellow"].push("empty");
+      data["green"].push("empty");
+      data["blue"].push("empty");
+      data["purple"].push("empty");
+    }
+    console.log(data);
     setColors(data);
 
     // console.log("making albums" + artWork);
@@ -175,7 +190,7 @@ function Rainbow() {
     <div className="App">
       <header className="App-header">
         {colors ? (
-          <Animation color={colors} />
+          <Animation color={colors} metaData={metaData} />
         ) : (
           // <Red urls={colors["red"]} />
 
