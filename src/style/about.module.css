@@ -2,6 +2,13 @@ body {
   font-family: "Aileron";
 }
 
+.container {
+  text-align: left;
+  justify-content: top;
+  margin-left: 5vw;
+  margin-right: 30vw;
+}
+
 .title {
   margin-top: 0px;
   margin-bottom: 10px;
@@ -17,29 +24,37 @@ body {
     #43a047,
     #eeff41,
     #f9a825,
+    #ff5722,
+    #ef5350,
+    #f48fb1,
+    #7e57c2,
+    #2196f3,
+    #26c6da,
+    #43a047,
+    #eeff41,
+    #f9a825,
     #ff5722
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 90pt;
 }
 
 .subtitle {
-  margin-top: -20px;
+  margin-top: -10px;
   font-weight: lighter;
 }
 
-.App {
-  text-align: center;
+.app {
+  text-align: left;
 }
 
 .header {
   background-color: whitesmoke;
-  min-height: 70vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 30vh;
+  align-items: left;
+  padding-top: 10vh;
   font-size: calc(10px + 1.5vmin);
 
   /* color: white; */
@@ -49,56 +64,14 @@ body {
   background-color: black;
   margin: 10px
 } */
-.logo {
+/* .logo {
   margin-top: -18px;
 
   position: relative;
   top: 10pt;
 
   left: -5pt;
-}
-
-.spotifyButton {
-  margin-left: -105px;
-  position: absolute;
-  padding: 10pt;
-  min-height: 20pt;
-
-  padding-left: 15pt;
-  padding-right: 15pt;
-
-  font-size: 12pt;
-  border-radius: 5pt;
-  text-decoration: none;
-  color: white;
-  background-color: black;
-
-  /* height: 40px; */
-}
-
-.spotifyButton:hover,
-.spotifyButton:active,
-.spotifyButton:focus {
-  /* margin-left: -105px; */
-  position: absolute;
-  padding: 10pt;
-  min-height: 20pt;
-
-  padding-left: 15pt;
-  padding-right: 15pt;
-
-  font-size: 12pt;
-  border-radius: 5pt;
-  text-decoration: none;
-  background-color: #1db954;
-  color: black;
-  /* padding: 10pt;
-  padding-left: 15pt;
-
-  padding-right: 15pt;
-  border-radius: 5pt; */
-  text-decoration: none;
-}
+} */
 
 .about {
   position: absolute;

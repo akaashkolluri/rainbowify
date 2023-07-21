@@ -12,12 +12,25 @@ const REDIRECT_URI = `${window.location}rainbow`;
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
 
+const subheaders = [
+  "life is prettier in color",
+  "the colors of your spotify",
+  "because who doesn't love rainbows?",
+];
+
 function Home() {
   return (
     <div className={styles.app}>
       <header className={styles.header}>
+        <h3 className={styles.about}>
+          {" "}
+          <a href={"/about"}> about </a>
+        </h3>
         <h1 className={styles.title}> rainbowify</h1>{" "}
-        <h3 className={styles.subtitle}> by akaash and jessye</h3>
+        <h3 className={styles.subtitle}>
+          {" "}
+          {subheaders[Math.floor(Math.random() * 3)]}
+        </h3>
         <SlideInDown>
           <a
             className={styles.spotifyButton}
