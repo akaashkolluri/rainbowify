@@ -7,7 +7,7 @@ import styles from "../style/home.module.css";
 import Icon from "@mdi/react";
 import { mdiSpotify } from "@mdi/js";
 
-const CLIENT_ID = "7f915cdb16e945578d294e9ee80673a5";
+const CLIENT_ID = "";
 const REDIRECT_URI = `${window.location}rainbow`;
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
@@ -34,7 +34,7 @@ function Home() {
         <SlideInDown>
           <a
             className={styles.spotifyButton}
-            href={`${AUTH_ENDPOINT}?client_id=${process.env.CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=user-top-read user-read-recently-played user-library-read`}
+            href={`${AUTH_ENDPOINT}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}&scope=user-top-read user-read-recently-played user-library-read`}
           >
             {/* <h2 className={styles.buttonCase}> */}
             <Icon path={mdiSpotify} size={1.5} className={styles.logo} />{" "}
