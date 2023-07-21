@@ -44,10 +44,10 @@
 .App-header a:hover,
 a:active,
 a:focus {
-  background-color: green;
+  /* background-color: green;
   padding: 15pt;
   border-radius: 20pt;
-  text-decoration: none;
+  text-decoration: none; */
 }
 
 @keyframes App-logo-spin {
