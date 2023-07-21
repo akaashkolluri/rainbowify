@@ -68,8 +68,7 @@ function End({ onBack, urls }) {
         <h3 className={styles.subtitle}> did you like your rainbow?</h3>
         <div className={styles.buttonGroup}>
           {" "}
-          <a onClick={onBack}>{"  Back  "}</a>{" "}
-          <a href={"https://rainbowify.vercel.app/"}>{"  Home  "}</a>
+          <a onClick={onBack}>{"  Back  "}</a> <a href={"/"}>{"  Home  "}</a>
           <a onClick={notify}>{"  Share   "}</a>{" "}
         </div>
       </div>
