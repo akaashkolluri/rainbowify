@@ -31,7 +31,7 @@ function About() {
         <h3 className={styles.subtitle}>
           {" "}
           If you have feedback, questions, or just want to say hi, feel free to
-          reach out at {" [pending]"}
+          reach out at akaash@stanford.edu!
         </h3>
       </header>
     </div>
