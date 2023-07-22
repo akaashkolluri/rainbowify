@@ -53,10 +53,10 @@ function End({ onBack, urls }) {
   // };
 
   const notify = () => {
-    navigator.clipboard.writeText(url);
+    // navigator.clipboard.writeText(url);
     message.open({
       type: "success",
-      content: "Share link copied to clipboard!",
+      content: "Share coming soon!",
     });
 
     // handleDownloadImage();
