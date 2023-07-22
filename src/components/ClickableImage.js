@@ -56,6 +56,7 @@ function ClickableImage({ src, style, albumData, backOne }) {
         }}
       />
       <Modal
+        closable={false}
         // title="About Song"
         open={isModalOpen}
         style={{ width: 600 }}

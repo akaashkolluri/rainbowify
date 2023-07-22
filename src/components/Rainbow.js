@@ -157,10 +157,6 @@ function Rainbow() {
         urlEnd
     );
 
-    console.log(
-      "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
-        urlEnd
-    );
     console.log(data);
 
     for (let i = 0; i < 14; i++) {

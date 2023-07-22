@@ -36,14 +36,14 @@ const pages: ((
   ),
   ({ style, color, metaData, backOne }) => (
     <animated.div style={{ ...style }}>
-      <Orange urls={color["orange"]} metaData={metaData} backOne={backOne}>
+      <Orange urls={color["yellow"]} metaData={metaData} backOne={backOne}>
         {" "}
       </Orange>
     </animated.div>
   ),
   ({ style, color, metaData, backOne }) => (
     <animated.div style={{ ...style }}>
-      <Yellow urls={color["yellow"]} metaData={metaData} backOne={backOne}>
+      <Yellow urls={color["orange"]} metaData={metaData} backOne={backOne}>
         {" "}
       </Yellow>
     </animated.div>
