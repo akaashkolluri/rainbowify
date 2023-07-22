@@ -18,9 +18,9 @@ function About() {
         <h1 className={styles.title}> about</h1> <h2> My Rainbow</h2>
         <h3 className={styles.subtitle}>
           All albums that show up in your rainbow are pulled directly from your
-          Spotify "liked" songs. Not all colors of your rainbow may be filled in
-          becuase your top songs might not allign with all colors. If your
-          looking to improve your rainbow, favorite some more songs!
+          Spotify top and saved track. Not all colors of your rainbow may be
+          filled in because your top songs might not align with all colors. If
+          you're looking to improve your rainbow, save some more songs!
         </h3>
         <h2> Creators</h2>
         <h3 className={styles.subtitle}>
