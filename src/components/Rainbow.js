@@ -149,8 +149,28 @@ function Rainbow() {
     // console.log(urls);
   };
 
+  const addAlbums = async (offset, artWork) => {
+    let urlEnd = artWork.slice(offset, offset + 150).toString();
+    const { data } = await axios.get(
+      "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
+        urlEnd
+    );
+
+    colors["red"] = [...colors["red"], ...data["red"]];
+    colors["orange"] = [...colors["orange"], ...data["orange"]];
+    colors["yellow"] = [...colors["yellow"], ...data["yellow"]];
+    colors["green"] = [...colors["green"], ...data["green"]];
+    colors["blue"] = [...colors["blue"], ...data["blue"]];
+    colors["purple"] = [...colors["purple"], ...data["purple"]];
+    setColors(colors);
+    console.log(colors);
+
+    if (artWork.length > offset + 150) addAlbums(offset + 150, artWork);
+  };
+
   const makeAlbums = async (artWork) => {
     console.log("num artwork" + artWork.length);
+
     let urlEnd = artWork.slice(0, 150).toString();
     const { data } = await axios.get(
       "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
@@ -160,15 +180,16 @@ function Rainbow() {
     console.log(data);
 
     for (let i = 0; i < 14; i++) {
-      data["red"].push("empty");
-      data["orange"].push("empty");
-      data["yellow"].push("empty");
-      data["green"].push("empty");
-      data["blue"].push("empty");
-      data["purple"].push("empty");
+      if (data["red"].length < 14) data["red"].push("empty");
+      if (data["orange"].length < 14) data["orange"].push("empty");
+      if (data["yellow"].length < 14) data["yellow"].push("empty");
+      if (data["green"].length < 14) data["green"].push("empty");
+      if (data["blue"].length < 14) data["blue"].push("empty");
+      if (data["purple"].length < 14) data["purple"].push("empty");
     }
     console.log(data);
     setColors(data);
+    // if (artWork.length > 150) addAlbums(150, artWork);
 
     // console.log("making albums" + artWork);
 
