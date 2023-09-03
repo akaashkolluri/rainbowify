@@ -1,6 +1,7 @@
 import "./App.css";
 
 import { Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Home from "./components/Home";
 import Rainbow from "./components/Rainbow";
 import About from "./components/About";
@@ -15,6 +16,7 @@ function App() {
         <Route path="privacy" element={<Privacy />} />
         <Route path="rainbow" element={<Rainbow />} />
       </Routes>
+      <Analytics />
     </div>
   );
 }
