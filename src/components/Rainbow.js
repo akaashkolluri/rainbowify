@@ -171,7 +171,7 @@ function Rainbow() {
   const makeAlbums = async (artWork) => {
     console.log("num artwork" + artWork.length);
 
-    let urlEnd = artWork.slice(0, 90).toString();
+    let urlEnd = artWork.slice(0, 70).toString();
     const { data } = await axios.get(
       "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
         urlEnd
@@ -213,25 +213,24 @@ function Rainbow() {
 
           /* 
 The follow is taken from https://codepen.io/jackrugile/pen/JddmaX */
-          <div>
+
+          <div class="loader">
             <h1>Loading your Spotify rainbow</h1>
-            <div class="loader">
-              <div class="loader-inner">
-                <div class="loader-line-wrap">
-                  <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                  <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                  <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                  <div class="loader-line"></div>
-                </div>
-                <div class="loader-line-wrap">
-                  <div class="loader-line"></div>
-                </div>
+            <div class="loader-inner">
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+              </div>
+              <div class="loader-line-wrap">
+                <div class="loader-line"></div>
               </div>
             </div>
           </div>
