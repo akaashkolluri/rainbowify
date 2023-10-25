@@ -213,23 +213,25 @@ function Rainbow() {
 
           /* 
 The follow is taken from https://codepen.io/jackrugile/pen/JddmaX */
-          <div class="loader">
+          <div>
             <h1>Loading your Spotify rainbow</h1>
-            <div class="loader-inner">
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
+            <div class="loader">
+              <div class="loader-inner">
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
               </div>
             </div>
           </div>
