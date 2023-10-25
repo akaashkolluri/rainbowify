@@ -21,36 +21,36 @@ let url = window.location.href;
 let home = url.split("rainbow")[0];
 
 function End({ onBack, urls }) {
-  // useEffect(() => {
-  //   handleDownloadImage();
-  // }, []);
+  useEffect(() => {
+    handleDownloadImage();
+  }, []);
 
-  // const handleDownloadImage = async () => {
-  //   // html2canvas(document.getElementById("print3")).then((canvas) => {
-  //   //   //document.body.appendChild(canvas)
-  //   //   var base64image = canvas.toDataURL("image/png");
-  //   //   var link = document.createElement("a");
-  //   //   //window.open(base64image , "_blank");
-  //   //   link.href = base64image;
-  //   //   link.download = "blue-downloaded-image2.png";
+  const handleDownloadImage = async () => {
+    // html2canvas(document.getElementById("print3")).then((canvas) => {
+    //   //document.body.appendChild(canvas)
+    //   var base64image = canvas.toDataURL("image/png");
+    //   var link = document.createElement("a");
+    //   //window.open(base64image , "_blank");
+    //   link.href = base64image;
+    //   link.download = "blue-downloaded-image2.png";
 
-  //   //   document.body.appendChild(link);
-  //   //   link.click();
-  //   //   document.body.removeChild(link);
-  //   // });
-  //   const element = document.getElementById("print3"),
-  //     canvas = await html2canvas(element),
-  //     data = canvas.toDataURL("image/png"),
-  //     link = document.createElement("a");
+    //   document.body.appendChild(link);
+    //   link.click();
+    //   document.body.removeChild(link);
+    // });
+    const element = document.getElementById("print1"),
+      canvas = await html2canvas(element, { useCORS: true }),
+      data = canvas.toDataURL("image/png"),
+      link = document.createElement("a");
 
-  //   console.log(data);
-  //   link.href = data;
-  //   link.download = "blue-downloaded-image.png";
+    console.log(data);
+    link.href = data;
+    link.download = "blue-downloaded-image.png";
 
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // };
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const notify = () => {
     // navigator.clipboard.writeText(url);
@@ -63,6 +63,18 @@ function End({ onBack, urls }) {
   };
   return (
     <div className={styles.container} id={"print2"}>
+      {true ? (
+        <div style={{ width: 750, height: 1500 }} id={"print1"}>
+          <Red urls={urls["red"]} />
+          <Orange urls={urls["orange"]} />
+          <Yellow urls={urls["yellow"]} />
+          <Green urls={urls["green"]} />
+          <Blue urls={urls["blue"]} />
+          <Purple urls={urls["purple"]} />
+        </div>
+      ) : (
+        <div> </div>
+      )}
       <div className={styles.area}>
         <h1 className={styles.title}> rainbowify</h1>{" "}
         <h3 className={styles.subtitle}> did you like your rainbow?</h3>

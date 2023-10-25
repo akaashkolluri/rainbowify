@@ -171,7 +171,7 @@ function Rainbow() {
   const makeAlbums = async (artWork) => {
     console.log("num artwork" + artWork.length);
 
-    let urlEnd = artWork.slice(0, 150).toString();
+    let urlEnd = artWork.slice(0, 100).toString();
     const { data } = await axios.get(
       "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
         urlEnd
