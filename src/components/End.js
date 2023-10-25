@@ -21,9 +21,9 @@ let url = window.location.href;
 let home = url.split("rainbow")[0];
 
 function End({ onBack, urls }) {
-  useEffect(() => {
-    handleDownloadImage();
-  }, []);
+  // useEffect(() => {
+  //   handleDownloadImage();
+  // }, []);
 
   const handleDownloadImage = async () => {
     // html2canvas(document.getElementById("print3")).then((canvas) => {
@@ -63,7 +63,7 @@ function End({ onBack, urls }) {
   };
   return (
     <div className={styles.container} id={"print2"}>
-      {true ? (
+      {false ? (
         <div style={{ width: 750, height: 1500 }} id={"print1"}>
           <Red urls={urls["red"]} />
           <Orange urls={urls["orange"]} />

@@ -14,8 +14,9 @@ const RESPONSE_TYPE = "token";
 
 const subheaders = [
   "life is prettier in color",
-  "the colors of your songs",
+  "we were in screaming colors",
   "because who doesn't love rainbows?",
+  "show me your true colors",
 ];
 
 function Home() {

@@ -30,6 +30,7 @@ function Rainbow() {
   const [albumUrl, setAlbumUrl] = useState("");
   const [colors, setColors] = useState("");
   const [blue, setBlue] = useState("");
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -149,23 +150,31 @@ function Rainbow() {
     // console.log(urls);
   };
 
-  const addAlbums = async (offset, artWork) => {
-    let urlEnd = artWork.slice(offset, offset + 90).toString();
+  const addAlbums = async (offset, artWork, colorsTemp) => {
+    console.log("adding albums");
+    let urlEnd = artWork.slice(offset, offset + 70).toString();
     const { data } = await axios.get(
       "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
         urlEnd
     );
 
-    colors["red"] = [...colors["red"], ...data["red"]];
-    colors["orange"] = [...colors["orange"], ...data["orange"]];
-    colors["yellow"] = [...colors["yellow"], ...data["yellow"]];
-    colors["green"] = [...colors["green"], ...data["green"]];
-    colors["blue"] = [...colors["blue"], ...data["blue"]];
-    colors["purple"] = [...colors["purple"], ...data["purple"]];
-    setColors(colors);
-    console.log(colors);
+    console.log("data", data);
 
-    if (artWork.length > offset + 90) addAlbums(offset + 90, artWork);
+    console.log("colorTemp", colorsTemp);
+    colorsTemp["red"] = [...data["red"], ...colorsTemp["red"]];
+    colorsTemp["orange"] = [...data["orange"], ...colorsTemp["orange"]];
+    colorsTemp["yellow"] = [...data["yellow"], ...colorsTemp["yellow"]];
+    colorsTemp["green"] = [...data["green"], ...colorsTemp["green"]];
+    colorsTemp["blue"] = [...data["blue"], ...colorsTemp["blue"]];
+    colorsTemp["purple"] = [...data["purple"], ...colorsTemp["purple"]];
+
+    setColors(colorsTemp);
+    console.log(colorsTemp);
+
+    console.log("albums added");
+    if (artWork.length > offset + 70)
+      addAlbums(offset + 70, artWork, colorsTemp);
+    else setReady(true);
   };
 
   const makeAlbums = async (artWork) => {
@@ -179,16 +188,9 @@ function Rainbow() {
 
     console.log(data);
 
-    for (let i = 0; i < 14; i++) {
-      if (data["red"].length < 14) data["red"].push("empty");
-      if (data["orange"].length < 14) data["orange"].push("empty");
-      if (data["yellow"].length < 14) data["yellow"].push("empty");
-      if (data["green"].length < 14) data["green"].push("empty");
-      if (data["blue"].length < 14) data["blue"].push("empty");
-      if (data["purple"].length < 14) data["purple"].push("empty");
-    }
     console.log(data);
     setColors(data);
+    addAlbums(70, artWork, data);
     // if (artWork.length > 150) addAlbums(150, artWork);
 
     // console.log("making albums" + artWork);
@@ -203,34 +205,55 @@ function Rainbow() {
     // console.log(data);
   };
 
+  const padColors = (data) => {
+    let red = data["red"];
+    let orange = data["orange"];
+    let yellow = data["yellow"];
+    let green = data["green"];
+    let blue = data["blue"];
+    let purple = data["purple"];
+
+    for (let i = 0; i < 15; i++) {
+      red.push("empty");
+      orange.push("empty");
+      yellow.push("empty");
+      green.push("empty");
+      blue.push("empty");
+      purple.push("empty");
+    }
+
+    return data;
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         {colors ? (
-          <Animation color={colors} metaData={metaData} />
+          <Animation color={padColors(colors)} metaData={metaData} />
         ) : (
           // <Red urls={colors["red"]} />
 
           /* 
 The follow is taken from https://codepen.io/jackrugile/pen/JddmaX */
-
-          <div class="loader">
-            <h1>Loading your Spotify rainbow</h1>
-            <div class="loader-inner">
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
-              </div>
-              <div class="loader-line-wrap">
-                <div class="loader-line"></div>
+          <div>
+            <div class="loader">
+              <h1 style={{ color: "black" }}>Loading your Spotify rainbow</h1>
+              <div class="loader-inner">
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
+                <div class="loader-line-wrap">
+                  <div class="loader-line"></div>
+                </div>
               </div>
             </div>
           </div>
