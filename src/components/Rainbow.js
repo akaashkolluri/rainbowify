@@ -50,7 +50,7 @@ function Rainbow() {
     let metaData = [];
 
     for (let i = 0; i < 3; i++) {
-      term = "short_term";
+      let term = "short_term";
       if (i == 1) term = "medium_term";
       if (i == 2) term = "long_term";
       const { data } = await axios.get(
