@@ -22,15 +22,15 @@ function About() {
           filled in because your top songs might not align with all colors. If
           you're looking to improve your rainbow, save some more songs!
         </h3>
-        <h2> Creators</h2>
+        {/* <h2> Creators</h2>
         <h3 className={styles.subtitle}>
           {" "}
           Coded by Akaash Kolluri. Graphic design by Jessye Fan.
-          {/*           
+                    
            If you have
           feedback, questions, or just want to say hi, feel free to reach out at
-          akaash@stanford.edu! */}
-        </h3>
+          akaash@stanford.edu!
+        </h3> */}
         <h2> Privacy</h2>
         <h3 className={styles.subtitle}>
           {" "}
