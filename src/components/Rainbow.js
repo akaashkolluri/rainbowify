@@ -49,7 +49,7 @@ function Rainbow() {
     let artWork = [];
     let metaData = [];
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 1; i++) {
       const { data } = await axios.get(
         "https://api.spotify.com/v1/me/top/tracks",
         {
@@ -57,9 +57,8 @@ function Rainbow() {
             Authorization: `Bearer ${id}`,
           },
           params: {
-            time_range: "long_term",
             limit: 50,
-            offset: i * 50,
+            offset: 0,
           },
         }
       );
@@ -77,7 +76,7 @@ function Rainbow() {
       topTracks = [...topTracks, ...data.items];
     }
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 5; i++) {
       const { data } = await axios.get("https://api.spotify.com/v1/me/tracks", {
         headers: {
           Authorization: `Bearer ${id}`,
