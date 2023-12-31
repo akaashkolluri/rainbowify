@@ -152,7 +152,7 @@ function Rainbow() {
 
   const addAlbums = async (offset, artWork, colorsTemp) => {
     console.log("adding albums");
-    let urlEnd = artWork.slice(offset, offset + 70).toString();
+    let urlEnd = artWork.slice(offset, offset + 30).toString();
     const { data } = await axios.get(
       "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
         urlEnd
@@ -161,26 +161,33 @@ function Rainbow() {
     console.log("data", data);
 
     console.log("colorTemp", colorsTemp);
-    colorsTemp["red"] = [...data["red"], ...colorsTemp["red"]];
-    colorsTemp["orange"] = [...data["orange"], ...colorsTemp["orange"]];
-    colorsTemp["yellow"] = [...data["yellow"], ...colorsTemp["yellow"]];
-    colorsTemp["green"] = [...data["green"], ...colorsTemp["green"]];
-    colorsTemp["blue"] = [...data["blue"], ...colorsTemp["blue"]];
-    colorsTemp["purple"] = [...data["purple"], ...colorsTemp["purple"]];
+    colorsTemp["red"] = [...colorsTemp["red"], ...data["red"]];
+    colorsTemp["orange"] = [...colorsTemp["orange"], ...data["orange"]];
+    colorsTemp["yellow"] = [...colorsTemp["yellow"], ...data["yellow"]];
+    colorsTemp["green"] = [...colorsTemp["green"], ...data["green"]];
+    colorsTemp["blue"] = [...colorsTemp["blue"], ...data["blue"]];
+    colorsTemp["purple"] = [...colorsTemp["purple"], ...data["purple"]];
 
+    colorsTemp["red"] = colorsTemp["red"].filter((x) => x != "empty");
+    colorsTemp["orange"] = colorsTemp["orange"].filter((x) => x != "empty");
+    colorsTemp["yellow"] = colorsTemp["yellow"].filter((x) => x != "empty");
+    colorsTemp["green"] = colorsTemp["green"].filter((x) => x != "empty");
+    colorsTemp["blue"] = colorsTemp["blue"].filter((x) => x != "empty");
+    colorsTemp["purple"] = colorsTemp["purple"].filter((x) => x != "empty");
+    colorsTemp = padColors(colorsTemp);
     setColors(colorsTemp);
     console.log(colorsTemp);
 
     console.log("albums added");
-    if (artWork.length > offset + 70)
-      addAlbums(offset + 70, artWork, colorsTemp);
+    if (artWork.length > offset + 30)
+      addAlbums(offset + 30, artWork, colorsTemp);
     else setReady(true);
   };
 
   const makeAlbums = async (artWork) => {
     console.log("num artwork" + artWork.length);
 
-    let urlEnd = artWork.slice(0, 70).toString();
+    let urlEnd = artWork.slice(0, 90).toString();
     const { data } = await axios.get(
       "https://rainbowify-backend-git-master-akaash.vercel.app/parsesongs?songs=" +
         urlEnd
@@ -190,7 +197,7 @@ function Rainbow() {
 
     console.log(data);
     setColors(data);
-    addAlbums(70, artWork, data);
+    addAlbums(90, artWork, data);
     // if (artWork.length > 150) addAlbums(150, artWork);
 
     // console.log("making albums" + artWork);

@@ -56,9 +56,10 @@ function End({ onBack, urls }) {
     // navigator.clipboard.writeText(url);
     message.open({
       type: "success",
-      content: "Share coming soon!",
+      content: "Share link copied to clipboard!",
     });
 
+    navigator.clipboard.writeText(window.location.href);
     // handleDownloadImage();
   };
   return (
