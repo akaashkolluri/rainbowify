@@ -73,7 +73,7 @@ function Rainbow() {
           metaData[albumUrl] = data.items[j].album;
         }
       }
-      topTracks = [...topTracks, ...data.items];
+      topTracks = [...data.items, ...topTracks];
     }
 
     for (let i = 0; i < 5; i++) {
@@ -97,7 +97,7 @@ function Rainbow() {
           metaData[albumUrl] = data.items[j].track.album;
         }
       }
-      topTracks = [...topTracks, ...data.items];
+      topTracks = [...data.items, ...topTracks];
     }
 
     // for (let i = 0; i < 30; i++) {
