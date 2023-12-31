@@ -179,7 +179,7 @@ function Rainbow() {
     console.log(colorsTemp);
 
     console.log("albums added");
-    if (artWork.length > offset + 30)
+    if (artWork.length > offset + 30 && artWork.length < 200)
       addAlbums(offset + 30, artWork, colorsTemp);
     else setReady(true);
   };
@@ -197,7 +197,10 @@ function Rainbow() {
 
     console.log(data);
     setColors(data);
-    addAlbums(90, artWork, data);
+    if (artWork.length > 90 && artWork.length < 200)
+      addAlbums(90, artWork, data);
+    else setReady(true);
+
     // if (artWork.length > 150) addAlbums(150, artWork);
 
     // console.log("making albums" + artWork);
@@ -235,7 +238,7 @@ function Rainbow() {
   return (
     <div className="App">
       <header className="App-header">
-        {colors ? (
+        {colors && ready ? (
           <Animation color={padColors(colors)} metaData={metaData} />
         ) : (
           // <Red urls={colors["red"]} />
