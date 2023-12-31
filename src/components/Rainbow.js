@@ -49,7 +49,10 @@ function Rainbow() {
     let artWork = [];
     let metaData = [];
 
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 3; i++) {
+      term = "short_term";
+      if (i == 1) term = "medium_term";
+      if (i == 2) term = "long_term";
       const { data } = await axios.get(
         "https://api.spotify.com/v1/me/top/tracks",
         {
@@ -59,6 +62,7 @@ function Rainbow() {
           params: {
             limit: 50,
             offset: 0,
+            time_range: term,
           },
         }
       );
