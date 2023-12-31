@@ -25,9 +25,11 @@ function About() {
         <h2> Creators</h2>
         <h3 className={styles.subtitle}>
           {" "}
-          Coded by Akaash Kolluri. Graphic design by Jessye Fan. If you have
+          Coded by Akaash Kolluri. Graphic design by Jessye Fan.
+          {/*           
+           If you have
           feedback, questions, or just want to say hi, feel free to reach out at
-          akaash@stanford.edu!
+          akaash@stanford.edu! */}
         </h3>
         <h2> Privacy</h2>
         <h3 className={styles.subtitle}>
