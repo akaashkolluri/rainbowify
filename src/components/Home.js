@@ -8,7 +8,7 @@ import Icon from "@mdi/react";
 import { mdiSpotify } from "@mdi/js";
 
 const CLIENT_ID = "";
-const REDIRECT_URI = `${window.location}rainbow`;
+const REDIRECT_URI = "https://rainbowify.me/rainbow";
 const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
 const RESPONSE_TYPE = "token";
 
